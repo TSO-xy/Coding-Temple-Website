@@ -11,15 +11,15 @@ h1, h2, h3, h4 {
     color: #45a2da;
 }
 
-header > a {
+header a {
     color: black;
 }
 
-footer > a {
+footer a {
     color: white;
 }
 
-a:hover {
+header a:hover {
     color: #45a2da;
 }
 
