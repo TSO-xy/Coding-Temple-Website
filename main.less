@@ -11,6 +11,17 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+main {
+    min-height: 530px;
+    position: relative;
+}
+
+.logo {
+    animation-name: fadein-logo;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
 h1,
 h2,
 h3,
@@ -57,6 +68,11 @@ li a {
 article {
     display: flex;
     align-items: center;
+    /*position: absolute;
+    animation-name: fadein;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
     & > * {
         flex-basis: 50%
     }
@@ -66,6 +82,17 @@ article {
     img {
         max-width: 90%;
     }
+    &.frame2 {
+        opacity: 0;
+        animation-delay: 8s;
+        animation-duration: 12s;
+    }
+    &.frame3 {
+        opacity: 0;
+        animation-delay: 12s;
+        animation-duration: 18s;    
+        
+    }*/
 }
 
 p.grey {
@@ -112,11 +139,9 @@ aside {
 }
 
 /*smaller laptops*/
-
 @media all and (max-width: 960px) {}
 
 /*tablets*/
-
 @media all and (max-width: 640px) {
     header nav {
         display: none;
@@ -136,5 +161,24 @@ aside {
 }
 
 /*mobile*/
-
 @media all and (max-width: 514px) {}
+
+@keyframes fadein-logo{
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
